@@ -55,7 +55,7 @@ RoBERTa-base 是一种基于 Transformer 架构的自然语言处理预训练模
 **非必须，可直接使用训练好的模型*
 1. 下载训练数据集`train.csv`[下载连接](https://pan.baidu.com/s/16YypKD5hT_YamUjnShUbUg?pwd=1230)并放入`./data`
 
-2. 运行`data_split.ipynb`，预览并分割数据集为训练集和验证集
+2. 运行`./src/data_split.ipynb`，预览并分割数据集为训练集和验证集
 
 ### 模型训练
 **非必须，可直接使用训练好的模型*
@@ -126,7 +126,7 @@ tunnels:
 ## 成员分工
 - [@ZyanNo1](https://github.com/ZyanNo1)李则言：本地模型部署、模型训练、后端服务器部署、文档撰写
 - [@byktue](https://github.com/byktue)      杨金辉：数据采集处理、仓库挂载、仓库管理
-- 
+  
 ## 参考资料
 * Hugging Face 有关于 RoBERTa模型 无比详尽的 [tutorial document](https://huggingface.co/FacebookAI/roberta-base)
 * RUNOOB.com 有关于 Flask 的 [入门教程](https://www.runoob.com/flask/flask-router.html)
