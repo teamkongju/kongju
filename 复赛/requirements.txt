@@ -1,0 +1,11 @@
+Flask
+requests
+torch
+transformers
+tqdm
+scikit-learn
+numpy
+pandas
+pyyaml
+flask-cors
+pyngrok
