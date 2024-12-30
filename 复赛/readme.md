@@ -114,13 +114,6 @@ tunnels:
 
 6. 点击`Add webhook`，设置完毕
 
-## 参考资料
-* Hugging Face 有关于 RoBERTa模型 无比详尽的 [tutorial document](https://huggingface.co/FacebookAI/roberta-base)
-* RUNOOB.com 有关于 Flask 的 [入门教程](https://www.runoob.com/flask/flask-router.html)
-* Ngork 有关于 内网暴露 的 [tutorial document](https://ngrok.com/docs/)
-* OpenDigger 的 [用户文档](https://github.com/X-lab2017/open-digger-website/tree/master/docs/user_docs) 以及 [示例数据](https://xlab2017.yuque.com/staff-kbz9wp/olpzth/tq36xvyzg9b880hy?singleDoc#)
-* Kadam-Tushar 的 Github开源项目 [issue-classifier](https://github.com/Kadam-Tushar/Issue-Classifier)
-
 ## 项目展望
 * **在更大的数据集上训练** 现在三类issue的数据量比较悬殊，question类的训练较为缺乏，识别还不够准确。由于设备和时间的限制，只能在现在大小的数据集上训练，对于模型的定制化训练程度有限，未来可在更大的数据集上进行更深度的训练。
 
@@ -133,4 +126,11 @@ tunnels:
 ## 成员分工
 - [@ZyanNo1](https://github.com/ZyanNo1)李则言：本地模型部署、模型训练、后端服务器部署、文档撰写
 - [@byktue](https://github.com/byktue)      杨金辉：数据采集处理、仓库挂载、仓库管理
+- 
+## 参考资料
+* Hugging Face 有关于 RoBERTa模型 无比详尽的 [tutorial document](https://huggingface.co/FacebookAI/roberta-base)
+* RUNOOB.com 有关于 Flask 的 [入门教程](https://www.runoob.com/flask/flask-router.html)
+* Ngork 有关于 内网暴露 的 [tutorial document](https://ngrok.com/docs/)
+* OpenDigger 的 [用户文档](https://github.com/X-lab2017/open-digger-website/tree/master/docs/user_docs) 以及 [示例数据](https://xlab2017.yuque.com/staff-kbz9wp/olpzth/tq36xvyzg9b880hy?singleDoc#)
+* Kadam-Tushar 的 Github开源项目 [issue-classifier](https://github.com/Kadam-Tushar/Issue-Classifier)
 
