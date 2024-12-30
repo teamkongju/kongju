@@ -131,6 +131,6 @@ tunnels:
 * **使用更稳定的后端服务器** 将bot部署到有公网ip的云服务器上
 
 ## 成员分工
-- [@ZyanNo1](https://github.com/ZyanNo1)` `李则言：本地模型部署、模型训练、后端服务器部署、文档撰写
-- [@byktue](https://github.com/byktue) ` ` ` ` ` ` ` `杨金辉：数据采集处理、仓库挂载、仓库管理
+- [@ZyanNo1](https://github.com/ZyanNo1)李则言：本地模型部署、模型训练、后端服务器部署、文档撰写
+- [@byktue](https://github.com/byktue)      杨金辉：数据采集处理、仓库挂载、仓库管理
 
