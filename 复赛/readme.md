@@ -6,11 +6,26 @@
 ![alt text](c0ef726d4ca71d558745b0422a0e987.png)
 ![alt text](image.png)
 **如果issue不属于三类中的任何一类，将不会被打上标签*
+## 项目特点
+1. **自动化处理 GitHub Issue** ：
+通过机器学习模型RoBERTa，自动化分类和标记 GitHub Issue，使得项目管理更加高效。
+
+2. **特征提取** ：
+自定义特征，将`is_early_issue`、`is_opened_owner` 和 `is_question` 编码为模型输入特征，而非单从`issue_title`和`issue_text`的编码判断。多维度的特征充分利用了数据，提高了模型的预测准确性。
+
+3. **训练数据灵活** ：
+项目内置了诸如`create_modified_dataset` 等数据处理函数，能够灵活处理训练数据集。使用者只需对原始数据进行简单处理，即可将其用作模型的训练数据。这使得分类器可以持续优化和改进，适应更多的场景，拓展性高。
+
+4. **实时响应**：
+通过集成 Flask 和 GitHub Webhooks，系统可以实时响应并处理新的 Issue。这种实时性为项目管理提供了及时的反馈和处理。
+
 ## 关于模型
 RoBERTa-base 是一种基于 Transformer 架构的自然语言处理预训练模型，由Facebook AI 提出，作为BERT模型的改进型，使用了更大更丰富的语料作为训练集，学习迁移能力强，对于文本分类、问答系统等任务有着很好的表现。
 
 
-我们对RoBERTa-base模型进行了微调，并使用近98万条数据进行定制化训练，保证对issue分类有更优的表现。我们通过解析issue的url，将`is_early_issue`, `is_opened_owner`和 `is_question`作为`features`,`issue_title`和`issue_text`拼接编码后作为`encodings`，与`label`一起作为训练集再次训练（详见`src/utils.py`中相关函数）。
+我们对RoBERTa-base模型进行了微调，并使用近98万条数据进行定制化训练，保证对issue分类有更优的表现。
+
+我们通过解析issue的url，将`is_early_issue`, `is_opened_owner`和 `is_question`作为`features`,`issue_title`和`issue_text`拼接编码后作为`encodings`，与`label`一起作为训练集再次训练（详见`src/utils.py`中相关函数）。
 
 模型训练后各分类表现如下图：
 
@@ -79,8 +94,9 @@ tunnels:
     addr: 5000 #你的端口号
     hostname: YOUR_DOMAIN #你申请的ngork域名
  ```
+2. 在`./src/receive.py` `line28`中设置 置信度阈值`confidence_threshold` (默认为0.6)
 
-2. 使用已有的Github账号或新注册账号，在`Settings`中的`Developer Settings`中申请`Personal access token`(`Select scopes`必须勾选`repo`，其他任意)，并把这个token复制到`./src/receive.py` `line38`中：
+3. 使用已有的Github账号或新注册账号，在`Settings`中的`Developer Settings`中申请`Personal access token`(`Select scopes`必须勾选`repo`，其他任意)，并把这个token复制到`./src/receive.py` `line38`中：
  ```python
  headers = { 
             "Authorization": f"token YOUR_ACCESS_TOKEN", #替换成你的令牌
@@ -88,12 +104,12 @@ tunnels:
         }
  ```
 
-3. 在Terminal中输入:
+4. 在Terminal中输入:
 ```
     python src/receive.py
 ```
 
-4. 在新的Terminal里输入：
+5. 在新的Terminal里输入：
  ```
     ngrok start YOUR_TUNNEL_NAME
  ```
@@ -133,4 +149,3 @@ tunnels:
 * Ngork 有关于 内网暴露 的 [tutorial document](https://ngrok.com/docs/)
 * OpenDigger 的 [用户文档](https://github.com/X-lab2017/open-digger-website/tree/master/docs/user_docs) 以及 [示例数据](https://xlab2017.yuque.com/staff-kbz9wp/olpzth/tq36xvyzg9b880hy?singleDoc#)
 * Kadam-Tushar 的 Github开源项目 [issue-classifier](https://github.com/Kadam-Tushar/Issue-Classifier)
-
