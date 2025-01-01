@@ -1,7 +1,9 @@
 # Issue_label_bot
 本项目基于 [RoBERTa-base](https://huggingface.co/FacebookAI/roberta-base)模型 和 Flask架构 实现仓库中issue的自动分类。
 
-目前该bot可以识别三类：`bug`，`enhancement`和`question`，如果在仓库中有属于这三类的issue就会被自动打上标签，效果如下图：
+目前该bot可以识别三类：`bug`，`enhancement`和`question`，如果在仓库中有属于这三类的issue就会被自动打上标签。
+
+效果如下图：
 
 ![alt text](c0ef726d4ca71d558745b0422a0e987.png)
 ![alt text](image.png)
