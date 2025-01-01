@@ -69,13 +69,13 @@ RoBERTa-base 是一种基于 Transformer 架构的自然语言处理预训练模
 3. 将定制化训练后的模型放入`./data/save`中 [下载链接](https://pan.baidu.com/s/1q548GIkqANeqidolKCGSpA?pwd=1230) ( *如果要自行训练可跳过* )
 
 ### 数据预处理
-**非必须，可直接使用训练好的模型*
+**非必须，可直接使用我们已训练好的模型*
 1. 下载训练数据集`train.csv`[下载连接](https://pan.baidu.com/s/16YypKD5hT_YamUjnShUbUg?pwd=1230)并放入`./data`
 
 2. 运行`./src/data_split.ipynb`，预览并分割数据集为训练集和验证集
 
 ### 模型训练
-**非必须，可直接使用训练好的模型*
+**非必须，可直接使用我们已训练好的模型*
  ```
     python src/train.py --DATASET_SUFFIX _dropfeature --MODEL_NAME roberta --EMB_MODEL_CHECKPOINT roberta-base --device gpu
  ```
