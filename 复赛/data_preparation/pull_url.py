@@ -35,7 +35,7 @@ def get_active_repositories(token, page_size=100, num_repos=1000):
 
 
 # 使用你提供的个人访问令牌
-token = "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"
+token = "github_pat_YOUR_TOKEN"
 active_repos = get_active_repositories(token)
 
 
