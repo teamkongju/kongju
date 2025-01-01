@@ -70,7 +70,7 @@ RoBERTa-base 是一种基于 Transformer 架构的自然语言处理预训练模
 
 ### 数据预处理
 **非必须，可直接使用我们已训练好的模型*
-1. 下载训练数据集`train.csv`[下载连接](https://pan.baidu.com/s/16YypKD5hT_YamUjnShUbUg?pwd=1230)并放入`./data`
+1. 下载训练数据集`train.csv`并放入`./data` [下载链接](https://pan.baidu.com/s/16YypKD5hT_YamUjnShUbUg?pwd=1230)
 
 2. 运行`./src/data_split.ipynb`，预览并分割数据集为训练集和验证集
 
