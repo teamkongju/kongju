@@ -1,0 +1,2 @@
+- `check.py` `get.py`用于处理Opendigger的数据
+- `pull_issue.py` `pull_url.py` 调用Github API获取数据
