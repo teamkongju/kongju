@@ -82,6 +82,11 @@ RoBERTa-base 是一种基于 Transformer 架构的自然语言处理预训练模
 - 如果没有gpu请改为`--device cpu`。更多参数定义及调整详见`./src/config.py`。为了保证训练效率和减少I/O时间，训练检查点为每10000个iter一次，推荐在有GPU且可长时间运行的设备上训练。作者5个epoch跑了25h+
 
 - 训练过程使用了wandb记录，方便跟踪训练效果及设备状态，需要在wandb官网上注册并创建日志文件夹，在linux中提前登录。
+- 可使用 以下命令 用测试集对模型准确性进行评估。下载[测试集](https://pan.baidu.com/s/1KzC6BX8IZoO3rpZjKfGFZA?pwd=1230)，并放入`./data` [测试集下载链接](https://pan.baidu.com/s/1KzC6BX8IZoO3rpZjKfGFZA?pwd=1230)
+ ``` 
+    python src/evaluate.py --DATASET_SUFFIX _dropfeature --MODEL_NAME roberta --EMB_MODEL_CHECKPOINT roberta-base --device gpu
+ ```
+ 
 
 ### 后端服务器部署
 **这里采用 本地Flask 和 ngork 作为服务器，也可以在云服务器部署*
