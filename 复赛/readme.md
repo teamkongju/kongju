@@ -40,7 +40,7 @@ RoBERTa-base 是一种基于 Transformer 架构的自然语言处理预训练模
 - **RoBERTa**: Liu, Y., Ott, M., Goyal, N., Du, J., Joshi, M., Chen, D., Levy, O., Lewis, M., Zettlemoyer, L., & Stoyanov, V. (2019). [*RoBERTa: A Robustly Optimized BERT Pretraining Approach*. arXiv.](https://arxiv.org/abs/1907.11692)
 - **BERT**: Devlin, J., Chang, M. W., Lee, K., & Toutanova, K. (2018). [*BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding*. arXiv.](https://arxiv.org/abs/1810.04805)
 ## 数据集
-数据来源于 OpenDigger的[示例数据](https://xlab2017.yuque.com/staff-kbz9wp/olpzth/tq36xvyzg9b880hy?singleDoc#) 、和 Ticket-tagger的[开放数据](https://tickettagger.blob.core.windows.net/datasets/github-labels-top3-803k-$split.tar.gz)，经过清洗和格式化后形成训练集 [下载连接](https://pan.baidu.com/s/16YypKD5hT_YamUjnShUbUg?pwd=1230)
+数据来源于 OpenDigger的[示例数据](https://xlab2017.yuque.com/staff-kbz9wp/olpzth/tq36xvyzg9b880hy?singleDoc#) 、Ticket-tagger的[开放数据](https://tickettagger.blob.core.windows.net/datasets/github-labels-top3-803k-$split.tar.gz)和 Github排名前1000名仓库的日志，经过清洗和格式化后形成训练集 [下载连接](https://pan.baidu.com/s/16YypKD5hT_YamUjnShUbUg?pwd=1230)。
 
 数据集中三类issue的占比如下：
 
