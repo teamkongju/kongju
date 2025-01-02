@@ -1,13 +1,15 @@
 # Issue_label_bot
+
 本项目基于 [RoBERTa-base](https://huggingface.co/FacebookAI/roberta-base)模型 和 Flask架构 实现仓库中issue的自动分类。
 
 目前该bot可以识别三类：`bug`，`enhancement`和`question`，如果在仓库中有属于这三类的issue就会被自动打上标签。
 
-效果如下图：
+效果如下图（更详细演示内容可见 [PPT](https://github.com/teamkongju/kongju/blob/main/%E5%A4%8D%E8%B5%9B/issue%E6%96%87%E6%9C%AC%E8%AF%86%E5%88%AB%E5%88%86%E7%B1%BB%EF%BC%88%E5%A4%8D%E8%B5%9B%EF%BC%89.pptx)）：
 
 ![alt text](c0ef726d4ca71d558745b0422a0e987.png)
 ![alt text](image.png)
-**如果issue不属于三类中的任何一类，将不会被打上标签*
+**如果issue不属于三类中的任何一类，将不会被打上标签*<br>
+**演示使用*[@ZyanNo1](https://github.com/ZyanNo1)*的Github令牌，挂载本项目的仓库*
 ## 项目特点
 1. **自动化处理 GitHub Issue** ：
 通过机器学习模型RoBERTa，自动化分类和标记 GitHub Issue，使得项目管理更加高效。
@@ -38,7 +40,7 @@ RoBERTa-base 是一种基于 Transformer 架构的自然语言处理预训练模
 - **RoBERTa**: Liu, Y., Ott, M., Goyal, N., Du, J., Joshi, M., Chen, D., Levy, O., Lewis, M., Zettlemoyer, L., & Stoyanov, V. (2019). [*RoBERTa: A Robustly Optimized BERT Pretraining Approach*. arXiv.](https://arxiv.org/abs/1907.11692)
 - **BERT**: Devlin, J., Chang, M. W., Lee, K., & Toutanova, K. (2018). [*BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding*. arXiv.](https://arxiv.org/abs/1810.04805)
 ## 数据集
-数据来源于 OpenDigger的[示例数据](https://xlab2017.yuque.com/staff-kbz9wp/olpzth/tq36xvyzg9b880hy?singleDoc#) 和 Ticket-tagger的[开放数据](https://tickettagger.blob.core.windows.net/datasets/github-labels-top3-803k-$split.tar.gz)，经过清洗和格式化后形成训练集 [下载连接](https://pan.baidu.com/s/16YypKD5hT_YamUjnShUbUg?pwd=1230)
+数据来源于 OpenDigger的[示例数据](https://xlab2017.yuque.com/staff-kbz9wp/olpzth/tq36xvyzg9b880hy?singleDoc#) 、和 Ticket-tagger的[开放数据](https://tickettagger.blob.core.windows.net/datasets/github-labels-top3-803k-$split.tar.gz)，经过清洗和格式化后形成训练集 [下载连接](https://pan.baidu.com/s/16YypKD5hT_YamUjnShUbUg?pwd=1230)
 
 数据集中三类issue的占比如下：
 
@@ -70,7 +72,7 @@ RoBERTa-base 是一种基于 Transformer 架构的自然语言处理预训练模
 
 ### 数据预处理
 **非必须，可直接使用我们已训练好的模型*
-1. 下载训练数据集`train.csv`并放入`./data` [下载链接](https://pan.baidu.com/s/16YypKD5hT_YamUjnShUbUg?pwd=1230)
+1. 下载训练数据集`train.csv`[下载连接](https://pan.baidu.com/s/16YypKD5hT_YamUjnShUbUg?pwd=1230)并放入`./data`
 
 2. 运行`./src/data_split.ipynb`，预览并分割数据集为训练集和验证集
 
